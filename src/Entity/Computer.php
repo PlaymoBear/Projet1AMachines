@@ -26,7 +26,7 @@ class Computer
      * @ORM\ManyToOne(targetEntity="App\Entity\Category")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $categoty;
+    private $category;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -86,14 +86,14 @@ class Computer
         return $this;
     }
 
-    public function getCategoty(): ?Category
+    public function getCategory(): ?Category
     {
-        return $this->categoty;
+        return $this->category;
     }
 
-    public function setCategoty(?Category $categoty): self
+    public function setCategory(?Category $category): self
     {
-        $this->categoty = $categoty;
+        $this->category = $category;
 
         return $this;
     }
