@@ -11,6 +11,7 @@ class MachinesController extends AbstractController
     /**
      * @Route("/machines", name="machines")
      */
+
     public function index()
     {
         $repo_computer=$this->getDoctrine()->getRepository(Computer :: class);
@@ -19,4 +20,13 @@ class MachinesController extends AbstractController
             'controller_name' => 'MachinesController',
         ]);
     }
+
+    /**
+     * @Route("/")
+     */
+
+    public function home() {
+        return $this->render('machines/home.html.twig');
+    }
+
 }
