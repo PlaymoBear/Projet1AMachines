@@ -4,8 +4,13 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ComputerRepository")
+ * @UniqueEntity("ipAddr")
+ * @UniqueEntity("macAddr")
+ * @UniqueEntity("name")
  */
 class Computer
 {
@@ -29,7 +34,7 @@ class Computer
     private $category;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, unique=true)
      */
     private $name;
 
@@ -39,12 +44,12 @@ class Computer
     private $comment;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true, unique=true)
      */
     private $ipAddr;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, unique=true)
      */
     private $macAddr;
 
