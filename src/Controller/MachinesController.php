@@ -22,7 +22,7 @@ class MachinesController extends AbstractController
     }
 
     /**
-     * @Route("/")
+     * @Route("/",name="home")
      */
 
     public function home() {

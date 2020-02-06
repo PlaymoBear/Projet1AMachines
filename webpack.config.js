@@ -29,6 +29,8 @@ Encore
 
     .createSharedEntry('vendor', './assets/js/vendor.js')
 
+Encore.enableSassLoader()
+
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     //.splitEntryChunks()
 
