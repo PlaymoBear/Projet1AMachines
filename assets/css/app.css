@@ -1,7 +1,6 @@
 body {
     background-color: lightgray;
 }
-
 .logo-ginfo-formulaire{
     max-width: 20%;
     display: block;
@@ -9,5 +8,7 @@ body {
     margin-right: auto;
 }
 
-.sign-in{background-color:green;
+.titre-projet-machines{
+    text-align: center;
+    color: black;
 }
