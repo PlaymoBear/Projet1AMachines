@@ -3,31 +3,23 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use FOS\UserBundle\Model\User as BaseUser;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
- * @ORM\Table(name="fos_user")
  * @UniqueEntity("id")
  * @UniqueEntity("username")
  * @UniqueEntity("email")
  */
-class User extends BaseUser
+class User
 {
     /**
      * @ORM\Id()
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\GeneratedValue()
      * @ORM\Column(type="integer", unique=true)
      */
-    protected $id;
-
-    public function __construct()
-    {
-        parent::__construct();
-        // your own logic
-    }
+    private $id;
 
     /**
      * @ORM\Column(type="string", length=255, unique=true)
@@ -43,6 +35,9 @@ class User extends BaseUser
      * @ORM\Column(type="string", length=255)
      */
     private $password;
+
+
+    public $confirm_password;
 
     /**
      * @ORM\Column(type="json_array")
