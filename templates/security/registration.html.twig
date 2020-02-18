@@ -3,8 +3,14 @@
 
 {% block content %}
 
+    <div class="card">
+        <div class="header">
+
     <h1>Inscription sur le site</h1>
 
+    </div>
+
+        <div class="body">
     {{  form_start(form) }}
     {{ form_row(form.username,{'label': 'Nom d\'utilisateur '} ) }}
     {{ form_row(form.firstName,{'label': 'Prénom '} ) }}
@@ -16,5 +22,8 @@
 
     <button type="submit" class="btn btn-success"> Inscription </button>
     {{ form_end(form) }}
+        </div>
+
+    </div>
 
 {% endblock %}
