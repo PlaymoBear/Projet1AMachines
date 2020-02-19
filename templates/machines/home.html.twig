@@ -2,6 +2,7 @@
 
 {% block content %}
 
+    <form action="{{ path('home') }}", method="post">
     <div class="login-box">
         <div class="card">
             <div class="body">
@@ -16,7 +17,7 @@
                             <i class="material-icons">person</i>
                         </span>
                         <div class="form-line">
-                            <input type="text" class="form-control" name="email" placeholder="E-Mail" required="" autofocus="" aria-required="true">
+                            <input type="text" class="form-control" name="_username" placeholder="E-Mail" required="" autofocus="" aria-required="true">
                         </div>
                     </div>
                     <div class="input-group">
@@ -24,7 +25,7 @@
                             <i class="material-icons">lock</i>
                         </span>
                         <div class="form-line">
-                            <input type="password" class="form-control" name="password" placeholder="Password" required="" aria-required="true">
+                            <input type="password" class="form-control" name="_password" placeholder="Password" required="" aria-required="true">
                         </div>
                     </div>
                     <div class="col-xs-8 p-t-5 col-xs-offset-5">
@@ -43,5 +44,5 @@
             </div>
         </div>
     </div>
-
+    </form>
 {% endblock %}

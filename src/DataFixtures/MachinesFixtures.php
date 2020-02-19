@@ -20,7 +20,7 @@ class MachinesFixtures extends Fixture
             $user->setusername($faker->name)
                 ->setemail($faker->email)
                 ->setpassword($faker->password)
-                ->setRoles(array())
+                ->setRoles(array('ROLE_USER'))
                 ->setfirstName($faker->firstName)
                 ->setlastName($faker->lastName);
             $manager->persist($user);
