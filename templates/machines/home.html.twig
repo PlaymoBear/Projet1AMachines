@@ -2,6 +2,15 @@
 
 {% block content %}
 
+    {% if error %}
+        <div class="card">
+            <div class="titre-projet-machines">
+                    {{ error.messageKey|trans(error.messageData, 'security') }}
+                </>
+            </div>
+        </div>
+    {% endif %}
+
     {% if not app.user %}
     <form action="{{ path('home') }}", method="post">
     <div class="login-box">

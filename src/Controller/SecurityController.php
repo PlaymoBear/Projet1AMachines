@@ -44,4 +44,16 @@ class SecurityController extends AbstractController
      * @Route("/deconnexion", name="security_logout")
      */
     public function logout() {}
+
+
+    /**
+     * @Route("/admin", name="admin_dashboard")
+     */
+    public function admin_dashboard() {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'User tried to access a page without having ROLE_ADMIN');
+        return $this->render('security/admin_dashboard.html.twig');
+    }
+
+
 }
+
