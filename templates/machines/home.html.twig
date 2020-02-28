@@ -2,6 +2,7 @@
 
 {% block content %}
 
+    {% if not app.user %}
     <form action="{{ path('home') }}", method="post">
     <div class="login-box">
         <div class="card">
@@ -45,4 +46,9 @@
         </div>
     </div>
     </form>
+    {% else %}
+    <b>
+        Tu es déjà connecté
+    </b>
+    {% endif %}
 {% endblock %}
