@@ -3,7 +3,6 @@ security:
   encoders:
     App\Entity\User:
       algorithm: bcrypt
-
   providers:
     in_memory: { memory: ~ }
     in_database:
@@ -25,3 +24,4 @@ security:
       logout:
         path: security_logout
         target: home
+
